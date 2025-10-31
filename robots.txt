@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /includes/
+Disallow: /config/
+Disallow: /vendor/
+
+# Sitemaps (update with your domain)
+Sitemap: https://yourdomain.com/sitemap.xml

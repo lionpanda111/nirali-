@@ -1,0 +1,384 @@
+// Colors
+$primary: #FFD700;
+$primary-dark: #FFC107;
+$secondary: #333333;
+$light: #F8F9FA;
+$dark: #333333;
+$white: #FFFFFF;
+$black: #000000;
+
+// Typography
+$font-family-base: 'Poppins', sans-serif;
+
+// Import Bootstrap
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/bootstrap';
+
+// Base Styles
+body {
+    font-family: $font-family-base;
+    color: $dark;
+    overflow-x: hidden;
+    line-height: 1.7;
+}
+
+// Header
+.header {
+    .navbar {
+        min-height: 80px;
+        padding: 15px 0;
+        background: #ffffff !important;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        position: fixed !important;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 9999 !important;
+        width: 100%;
+        height: 80px;
+        
+        .navbar-brand {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            height: 100%;
+            
+            .brand-name {
+                font-size: 2rem;
+                font-weight: 800;
+                letter-spacing: 2px;
+                color: #333333;
+                text-transform: uppercase;
+                margin: 0;
+                line-height: 1;
+                
+                &:hover {
+                    color: #666666;
+                }
+            }
+        }
+        
+        .container {
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+        
+        &.scrolled {
+            padding: 10px 0;
+            background: $white !important;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            
+            .logo {
+                height: 50px;
+                margin-right: 10px;
+            }
+            
+            .brand-name {
+                font-size: 24px;
+                font-weight: 700;
+                color: $dark;
+                margin: 0;
+                letter-spacing: 1px;
+            }
+        }
+    }
+}
+
+// Buttons
+.btn {
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    border-radius: 50px;
+    padding: 0.6rem 1.5rem;
+    
+    &-primary {
+        background: $primary;
+        border-color: $primary;
+        color: $dark;
+        
+        &:hover {
+            background: darken($primary, 10%);
+            border-color: darken($primary, 10%);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+        }
+    }
+    
+    &-outline-primary {
+        border-color: $primary;
+        color: $primary;
+        
+        &:hover {
+            background: $primary;
+            color: $dark;
+        }
+    }
+}
+
+// Sections
+.section-padding {
+    padding: 100px 0;
+    
+    &-top {
+        padding-top: 100px;
+    }
+    
+    &-bottom {
+        padding-bottom: 100px;
+    }
+}
+
+// Section Title
+.section-title {
+    margin-bottom: 60px;
+    text-align: center;
+    
+    h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+        position: relative;
+        display: inline-block;
+        
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: $primary;
+        }
+    }
+    
+    p {
+        color: lighten($dark, 30%);
+        max-width: 700px;
+        margin: 0 auto;
+        font-size: 1.1rem;
+    }
+}
+
+// Navbar offset for fixed navbar
+body {
+    padding-top: 80px !important;
+    margin: 0;
+}
+
+// Hero Section
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 60px 0;
+    margin-top: 0;
+    position: relative;
+    top: -80px;
+    padding-top: 140px;
+    padding-bottom: 80px;
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
+                url('../images/hero-bg.jpg') no-repeat center center/cover;
+    position: relative;
+    z-index: 1;
+    
+    .container {
+        margin-top: 0;
+        padding: 20px 15px;
+        position: relative;
+        z-index: 2;
+    }
+    
+    h1 {
+        font-size: 3.5rem;
+        font-weight: 800;
+        margin-bottom: 1.5rem;
+        color: $dark;
+        line-height: 1.2;
+    }
+    
+    p {
+        font-size: 1.1rem;
+        color: lighten($dark, 20%);
+        margin-bottom: 2rem;
+        max-width: 600px;
+    }
+}
+
+// Services Section
+.services-section {
+    background: $light;
+    
+    .service-card {
+        background: $white;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 30px;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        
+        &:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-img {
+            height: 200px;
+            overflow: hidden;
+            
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: all 0.5s ease;
+            }
+        }
+        
+        .service-content {
+            padding: 25px;
+            
+            h3 {
+                font-size: 1.5rem;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+
+// Footer
+.footer {
+    background: $dark;
+    color: $white;
+    padding: 80px 0 30px;
+    
+    .footer-heading {
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 25px;
+        position: relative;
+        padding-bottom: 10px;
+        
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: $primary;
+        }
+    }
+    
+    .footer-links {
+        list-style: none;
+        padding: 0;
+        
+        li {
+            margin-bottom: 12px;
+            
+            a {
+                color: rgba(255, 255, 255, 0.7);
+                text-decoration: none;
+                transition: all 0.3s ease;
+                
+                &:hover {
+                    color: $primary;
+                    padding-left: 5px;
+                }
+            }
+        }
+    }
+    
+    .social-links {
+        a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            color: $white;
+            border-radius: 50%;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            text-decoration: none;
+            
+            &:hover {
+                background: $primary;
+                color: $dark;
+                transform: translateY(-3px);
+            }
+        }
+    }
+}
+
+// Responsive Styles
+@media (max-width: 991.98px) {
+    .hero-section {
+        padding: 150px 0 80px;
+        
+        h1 {
+            font-size: 2.8rem;
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hero-section {
+        padding: 120px 0 60px;
+        text-align: center;
+        
+        h1 {
+            font-size: 2.2rem;
+        }
+        
+        p {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    
+    .section-title {
+        h2 {
+            font-size: 2rem;
+        }
+    }
+}
+
+// Animations
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { 
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.slide-up {
+    animation: slideUp 0.8s ease-out;
+}

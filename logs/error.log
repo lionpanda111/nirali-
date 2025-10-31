@@ -1,0 +1,5 @@
+[09-Oct-2025 08:14:06 Europe/Berlin] PHP Warning:  Constant SITE_NAME already defined in C:\xampp\htdocs\Nirali\makeup-studio\includes\config.php on line 38
+[09-Oct-2025 08:14:06 Europe/Berlin] PHP Warning:  Constant INSTAGRAM_USERNAME already defined in C:\xampp\htdocs\Nirali\makeup-studio\includes\config.php on line 39
+[09-Oct-2025 08:14:06 Europe/Berlin] PHP Warning:  Constant MAIL_FROM already defined in C:\xampp\htdocs\Nirali\makeup-studio\includes\config.php on line 41
+[09-Oct-2025 08:14:06 Europe/Berlin] PHP Warning:  Constant ADMIN_EMAIL already defined in C:\xampp\htdocs\Nirali\makeup-studio\includes\config.php on line 42
+[09-Oct-2025 11:44:06 Asia/Kolkata] PHP Fatal error:  Cannot redeclare isLoggedIn() (previously declared in C:\xampp\htdocs\Nirali\makeup-studio\includes\config.php:119) in C:\xampp\htdocs\Nirali\makeup-studio\admin\includes\admin_auth.php on line 22
